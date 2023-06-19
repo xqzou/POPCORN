@@ -1,0 +1,26 @@
+{
+    "id": "10450517",
+    "path": "~/Documents/Github/POPCORN/data-raw/proc_genomic_region.R",
+    "project_path": "data-raw/proc_genomic_region.R",
+    "type": "r_source",
+    "hash": "2140545512",
+    "contents": "",
+    "dirty": false,
+    "created": 1687186946759.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "24,22",
+        "scrollLine": "13"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1687188585,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1687188585075,
+    "read_only": false,
+    "read_only_alternatives": []
+}
