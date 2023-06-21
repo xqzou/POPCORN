@@ -8,7 +8,7 @@ Re-calibrate the CNV QUAL, BSR}
 gen_unique_cnvlist(sample_cnvs)
 }
 \arguments{
-\item{sample_cnvs}{Sample-level CNV calls. Required columns: SampleID, CHROM, ID, POS, ALT, SVLEN, END, QUAL, BSR, CN}
+\item{sample_cnvs}{A data.frame of Sample-level CNV calls. Required columns: SampleID, CHROM, ID, POS, ALT, SVLEN, END, QUAL, BSR, CN}
 }
 \description{
 Generate a list of unique CNVs across all given samples

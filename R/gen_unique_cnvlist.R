@@ -1,6 +1,6 @@
 #' Generate a list of unique CNVs across all given samples
-#' Re-calibrate the CNV QUAL, BSR 
-#' @param sample_cnvs Sample-level CNV calls. Required columns: SampleID, CHROM, ID, POS, ALT, SVLEN, END, QUAL, BSR, CN
+#' Re-calibrate the CNV QUAL, BSR
+#' @param sample_cnvs A data.frame of Sample-level CNV calls. Required columns: SampleID, CHROM, ID, POS, ALT, SVLEN, END, QUAL, BSR, CN
 #' @export
 gen_unique_cnvlist <- function(sample_cnvs){
   sample_cnvs$BSR <- 1000*sample_cnvs[,"BC"]/abs(sample_cnvs$SVLEN)
@@ -15,6 +15,6 @@ gen_unique_cnvlist <- function(sample_cnvs){
               CN_max=max(CN),
               N=n()) %>%
     mutate('CHROM'=paste0("chr",CHROM))
-  
+
   return(cnv_uniqlist)
 }

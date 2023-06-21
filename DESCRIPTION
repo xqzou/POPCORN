@@ -2,8 +2,7 @@ Package: POPCORN
 Type: Package
 Title: Population-based Post-hoc Cleaning of DRAGEN CNVs R package
 Version: 0.1.0
-Author: Xueqing (Zoe) Zou
-Maintainer: Xueqing (Zoe) Zou <zoe.zou@astrazeneca.com>
+Authors@R: person("Xueqing (Zoe)", "Zou", email = "zoe.zou@astrazeneca.com", role = c("aut", "cre"))
 Description: A pipeline to conduct population-based post-hoc cleaning of DRAGEN CNV calls.
 License: MIT
 Encoding: UTF-8
