@@ -4,7 +4,7 @@
 #' 3) Segmental duplications
 #' 4) Simple Repeats
 #' 5) MHC
-#' @param cnvs uniq CNV calls. Required columns: SampleID, CHROM, ID, POS, ALT, SVLEN, END, QUAL, BSR, CN
+#' @param cnv uniq CNV calls. Required columns: SampleID, CHROM, ID, POS, ALT, SVLEN, END, QUAL, BSR, CN
 #' @export
 anno_cnv <- function(cnv){
 

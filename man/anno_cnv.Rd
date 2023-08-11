@@ -14,7 +14,7 @@
 anno_cnv(cnv)
 }
 \arguments{
-\item{cnvs}{uniq CNV calls. Required columns: SampleID, CHROM, ID, POS, ALT, SVLEN, END, QUAL, BSR, CN}
+\item{cnv}{uniq CNV calls. Required columns: SampleID, CHROM, ID, POS, ALT, SVLEN, END, QUAL, BSR, CN}
 }
 \description{
 Annotate overlapping of a list of unique autosomal CNVs with the following regions

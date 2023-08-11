@@ -4,7 +4,7 @@ Title: Population-based Post-hoc Cleaning of DRAGEN CNVs R package
 Version: 0.1.0
 Authors@R: person("Xueqing (Zoe)", "Zou", email = "zoe.zou@astrazeneca.com", role = c("aut", "cre"))
 Description: A pipeline to conduct population-based post-hoc cleaning of DRAGEN CNV calls.
-License: MIT
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.2
@@ -27,5 +27,4 @@ Suggests:
     testthat
 VignetteBuilder: knitr
 LazyData: true
-
-
+LazyDataCompression:xz
