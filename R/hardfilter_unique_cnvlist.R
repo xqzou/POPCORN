@@ -1,5 +1,5 @@
 #' Apply hardfilters to annotated CNV list
-#' @param cnv Required columns: SampleID, CHROM, ID, POS, ALT, SVLEN, END, QUAL_median, BSR_median
+#' @param cnv Annotated CNV data.frame Required columns: SampleID, CHROM, ID, POS, ALT, SVLEN, END, QUAL_median, BSR_median
 #' @param cutoff.svlen cutoff of CNV size
 #' @param cutoff.qual cutoff of CNV QUAL_median cross population
 #' @param cutoff.bsr cutoff of CNV BSR_median cross population

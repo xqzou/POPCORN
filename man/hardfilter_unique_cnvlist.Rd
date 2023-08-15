@@ -18,7 +18,7 @@ hardfilter_unique_cnvlist(
 )
 }
 \arguments{
-\item{cnv}{Required columns: SampleID, CHROM, ID, POS, ALT, SVLEN, END, QUAL_median, BSR_median}
+\item{cnv}{Annotated CNV data.frame Required columns: SampleID, CHROM, ID, POS, ALT, SVLEN, END, QUAL_median, BSR_median}
 
 \item{cutoff.svlen}{cutoff of CNV size}
 
