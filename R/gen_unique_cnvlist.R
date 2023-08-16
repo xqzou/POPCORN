@@ -3,7 +3,8 @@
 #' @param sample_cnvs A data.frame of Sample-level CNV calls. Required columns: SampleID, CHROM, ID, POS, ALT, SVLEN, END, QUAL, BSR, CN
 #' @export
 gen_unique_cnvlist <- function(sample_cnvs){
-  sample_cnvs$BSR <- 1000*sample_cnvs[,"BC"]/abs(sample_cnvs$SVLEN)
+  sample_cnvs <- sample_cnvs %>%
+    mutate(BSR=1000*BC/abs(SVLEN))
   cnv_uniqlist <- sample_cnvs %>%
     group_by(CHROM, ID, POS, ALT, SVLEN, END) %>%
     summarise(QUAL_median=median(QUAL),
