@@ -2,10 +2,11 @@
 
 #' Cluster same filtered CNVs from different Samples
 #' @param cnvs_filter CNV list (usually filtered). Required columns:CHROM, ID, POS, ALT, END, SVLEN, QUAL_median, BSR_median, N
+#' @param sample_cnv sample-level CNV list
 #' @param cutoff.olcluster cutoff of overlaping of two CNVs
 #' @param outputname output file name of merged CNV list
 #' @export
-merge_cnv <- function(cnvs_filter, cutoff.olcluster, outputname){
+merge_cnv <- function(cnvs_filter, sample_cnv, cutoff.olcluster, outputname){
 
   ####################################
   # Cluster CNVs
@@ -154,7 +155,7 @@ merge_cnv <- function(cnvs_filter, cutoff.olcluster, outputname){
 
   # keep the cnvs that are in hardfiltered_CNV_index
   cnv_fl <- cnv_uniqlist_index[,c("ID","index_CNV")] %>%
-    inner_join(cnv,by="ID")
+    inner_join(sample_cnv,by="ID")
 
   # choosing cnvs from the finalCNV calls for unique representation of index_CNVs across different samples
   sample_cnv_final <- cnv_final %>%

@@ -4,10 +4,12 @@
 \alias{merge_cnv}
 \title{Cluster same filtered CNVs from different Samples}
 \usage{
-merge_cnv(cnvs_filter, cutoff.olcluster, outputname)
+merge_cnv(cnvs_filter, sample_cnv, cutoff.olcluster, outputname)
 }
 \arguments{
 \item{cnvs_filter}{CNV list (usually filtered). Required columns:CHROM, ID, POS, ALT, END, SVLEN, QUAL_median, BSR_median, N}
+
+\item{sample_cnv}{sample-level CNV list}
 
 \item{cutoff.olcluster}{cutoff of overlaping of two CNVs}
 

@@ -30,7 +30,7 @@ anno_cnv <- function(cnv){
   # loop by chr
   for (j in 1:length(chr_seq)) {
 
-    chr_j <- chr_seq[j]
+    chr_j <- as.character(chr_seq[j])
     #   cnv_chr <- cnv[cnv$CHROM==chr_j,]
     #  cnv_chr$center <- round(cnv[cnv$CHROM==chr_seq[j],]$POS + abs(cnv[cnv$CHROM==chr_j,]$SVLEN)/2)
 
@@ -40,14 +40,9 @@ anno_cnv <- function(cnv){
     q_tlm_end <- telomere[telomere$chrom==chr_j & telomere$ix!=1, "chromEnd"]
 
     ctm_center <- round(centromere[centromere$chrom==chr_j, "start"] + (centromere[centromere$chrom==chr_j, "end"] - centromere[centromere$chrom==chr_j, "start"])/2)
-    #chr_len <- telomere[telomere$chrom==chr_j & telomere$ix!=1, "chromEnd"] - telomere[telomere$chrom==chr_j & telomere$ix==1, "chromStart"]
     p_len <- ctm_center - telomere[telomere$chrom==chr_j & telomere$ix==1, "chromStart"]
     q_len <- telomere[telomere$chrom==chr_j & telomere$ix!=1, "chromEnd"] - ctm_center
 
-    #cnv[cnv$CHROM==chr_j,]$p_tlm_dis <- 100*(round(cnv[cnv$CHROM==chr_j,]$POS + abs(cnv[cnv$CHROM==chr_j,]$SVLEN)/2) - p_tlm_end)/chr_len
-    #cnv[cnv$CHROM==chr_j,]$q_tlm_dis <- 100*(q_tlm_start - round(cnv[cnv$CHROM==chr_j,]$POS + abs(cnv[cnv$CHROM==chr_j,]$SVLEN)/2))/chr_len
-    #cnv[cnv$CHROM==chr_j,]$ctm_dis <- 100*(ctm_center - round(cnv[cnv$CHROM==chr_j,]$POS + abs(cnv[cnv$CHROM==chr_j,]$SVLEN)/2))/chr_len
-    #cnv[cnv$CHROM==chr_j,]$tlm_dis_nearest <- ifelse(cnv[cnv$CHROM==chr_j,]$p_tlm_dis<cnv[cnv$CHROM==chr_j,]$q_tlm_dis, cnv[cnv$CHROM==chr_j,]$p_tlm_dis, cnv[cnv$CHROM==chr_j,]$q_tlm_dis)
 
     cnv[cnv$CHROM==chr_j,]$p_tlm_dis <- (round(cnv[cnv$CHROM==chr_j,]$POS + abs(cnv[cnv$CHROM==chr_j,]$SVLEN)/2) - p_tlm_start)/p_len
     cnv[cnv$CHROM==chr_j,]$q_tlm_dis <- (q_tlm_end - round(cnv[cnv$CHROM==chr_j,]$POS + abs(cnv[cnv$CHROM==chr_j,]$SVLEN)/2))/q_len

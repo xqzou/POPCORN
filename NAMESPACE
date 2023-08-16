@@ -3,6 +3,7 @@
 export("%>%")
 export(anno_cnv)
 export(computeOl_2any)
+export(computeOl_2df)
 export(gen_unique_cnvlist)
 export(hardfilter_unique_cnvlist)
 export(merge_cnv)
