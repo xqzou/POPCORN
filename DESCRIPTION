@@ -21,7 +21,8 @@ Imports:
     magrittr,
     dplyr,
     tidyr,
-    GenomicRanges
+    GenomicRanges,
+    IRanges
 Suggests: 
     knitr,
     rmarkdown,
