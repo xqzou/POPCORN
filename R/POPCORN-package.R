@@ -7,6 +7,7 @@ utils::globalVariables(c("telomere", "centromere","gap","sg","srep"))
 #' @importFrom tidyr replace_na pivot_longer
 #' @importFrom stats median
 #' @importFrom GenomicRanges GRanges findOverlaps pintersect width
+#' @importFrom IRanges IRanges
 #' @importFrom utils write.table
 ## usethis namespace: end
 NULL
