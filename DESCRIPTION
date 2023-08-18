@@ -22,7 +22,8 @@ Imports:
     dplyr,
     tidyr,
     GenomicRanges,
-    IRanges
+    IRanges,
+    S4Vectors
 Suggests: 
     knitr,
     rmarkdown,

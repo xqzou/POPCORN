@@ -8,6 +8,7 @@ utils::globalVariables(c("telomere", "centromere","gap","sg","srep"))
 #' @importFrom stats median
 #' @importFrom GenomicRanges GRanges findOverlaps pintersect width
 #' @importFrom IRanges IRanges
+#' @importFrom S4Vectors Rle
 #' @importFrom utils write.table
 ## usethis namespace: end
 NULL
