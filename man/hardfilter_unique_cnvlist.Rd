@@ -2,7 +2,7 @@
 % Please edit documentation in R/hardfilter_unique_cnvlist.R
 \name{hardfilter_unique_cnvlist}
 \alias{hardfilter_unique_cnvlist}
-\title{Apply hardfilters to annotated CNV list}
+\title{Apply hardfilters to annotated unique CNV segment list}
 \usage{
 hardfilter_unique_cnvlist(
   cnv,
@@ -18,7 +18,7 @@ hardfilter_unique_cnvlist(
 )
 }
 \arguments{
-\item{cnv}{Annotated CNV data.frame Required columns: SampleID, CHROM, ID, POS, ALT, SVLEN, END, QUAL_median, BSR_median}
+\item{cnv}{Annotated CNV data.frame Required columns: CHROM, ID, POS, ALT, SVLEN, END, QUAL_median, BSR_median}
 
 \item{cutoff.svlen}{cutoff of CNV size}
 
@@ -39,5 +39,5 @@ hardfilter_unique_cnvlist(
 \item{cutoff.olmhc}{cutoff of overlaping of CNV with MHC}
 }
 \description{
-Apply hardfilters to annotated CNV list
+Apply hardfilters to annotated unique CNV segment list
 }
