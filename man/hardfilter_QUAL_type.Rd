@@ -4,14 +4,14 @@
 \alias{hardfilter_QUAL_type}
 \title{Apply hardfilters of QUAL for DEL and DUP separately to annotated unique CNV segment list}
 \usage{
-hardfilter_QUAL_type(cnv, cutoff.qual.dup, cutoff.qual.del)
+hardfilter_QUAL_type(cnv, cutoff.qual.del, cutoff.qual.dup)
 }
 \arguments{
 \item{cnv}{Annotated CNV data.frame Required columns: CHROM, ID, POS, ALT, SVLEN, END, QUAL_median, BSR_median}
 
-\item{cutoff.qual.dup}{cutoff of DUP QUAL_median cross population}
-
 \item{cutoff.qual.del}{cutoff of DEL QUAL_median cross population}
+
+\item{cutoff.qual.dup}{cutoff of DUP QUAL_median cross population}
 }
 \description{
 Apply hardfilters of QUAL for DEL and DUP separately to annotated unique CNV segment list

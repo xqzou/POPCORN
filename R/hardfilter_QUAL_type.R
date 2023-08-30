@@ -2,7 +2,7 @@
 #' @param cnv Annotated CNV data.frame Required columns: CHROM, ID, POS, ALT, SVLEN, END, QUAL_median, BSR_median
 #' @param cutoff.qual.dup cutoff of DUP QUAL_median cross population
 #' @param cutoff.qual.del cutoff of DEL QUAL_median cross population
-
+#' @export
 hardfilter_QUAL_type <- function(cnv,cutoff.qual.del, cutoff.qual.dup){
 
   print(paste0("cutoff.svlen: ", cutoff.svlen))
