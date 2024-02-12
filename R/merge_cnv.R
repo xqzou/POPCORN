@@ -101,7 +101,8 @@ merge_cnv <- function(cnvs_filter, sample_cnv, cutoff.olcluster, outputname){
                 QUAL=median(QUAL_median),
                 BSR=median(BSR_median),
                 N=n()) %>%
-      mutate(index_CNV=paste0(TYPE, ":",CHROM,"-",POS, "-",END))
+      mutate(index_CNV=paste0(TYPE, ":",CHROM,"-",POS, "-",END)) %>%
+      mutate(index_CNV=sub("chr","",index_CNV))
 
 
     # 7) Using index CNV for CNVs overlapping with other CNVs
